@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Color on Tap</title>
+<style>
+    /* CSS to style the element */
+    #myElement {
+        width: 500px;
+        height: 500px;
+        background-color: blue;
+        cursor: pointer; /* to make it look clickable */
+    }
+</style>
+</head>
+<body>
+
+<!-- HTML element to be manipulated -->
+<div id="myElement"></div>
+
+<script>
+    // JavaScript code to change the color
+    var myElement = document.getElementById("myElement");
+
+    // Function to change the color
+    function changeColor() {
+        // Generate a random color
+        var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+        // Set the background color
+        myElement.style.backgroundColor = randomColor;
+    }
+
+    // Add event listener to change color on tap
+    myElement.addEventListener("click", changeColor);
+</script>
+
+</body>
+</html>
